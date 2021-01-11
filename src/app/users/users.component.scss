@@ -1,0 +1,31 @@
+.alert {
+    margin: 15px 0;
+    fa-icon {
+        margin: 0 0 0 30px;
+        float: right;
+        cursor: pointer;
+    }
+}
+.cards {
+    background: #efefef;
+    position: relative;
+    z-index: 50;
+}
+.card {
+    margin: 15px 0;
+    background: #fff;
+    &:hover {
+        box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    }
+    fa-icon {
+        float: right;
+        &:hover {
+            color: #84260E;
+            cursor: pointer;
+        }
+    }
+    .address {
+        list-style: none;
+        padding: 0;
+    }
+}

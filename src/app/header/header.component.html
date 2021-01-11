@@ -1,0 +1,11 @@
+<div class="row header">
+    <div class="col"><h1>USERS</h1></div>
+    <div class="col menu">
+        <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+            <button class="btn btn-outline-primary mr-2" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()">menu</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownManual">
+              <button ngbDropdownItem *ngFor="let m of menu; let i = index">{{ m }}</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="alert alert-warning" role="warning" *ngIf="showWarning">
+    <fa-icon icon="times" (click)="closeWarning()"></fa-icon>
+    <fa-icon icon="check" (click)="removeUser()"></fa-icon>
+    Are you sure you want to remove {{ userToRemove }}?
+</div>
+<div class="alert alert-danger" role="alert" *ngIf="showAlert">
+    <fa-icon icon="times" (click)="closeAlert()"></fa-icon>
+    {{ alertMsg }}
+</div>
+<div class="row cards">
+    <div class="col-sm-4" *ngFor="let u of users; let i = index">
+        <div class="card">
+            <div class="card-body">
+              <fa-icon icon="trash" (click)="displayWarningMsg(i, u.name)"></fa-icon>
+              <h5 class="card-title">{{ u.name }}</h5>
+              <h6 class="card-subtitle mb-2 text-muted"><a href="mailto:{{u.email}}">{{ u.email }}</a></h6>
+                  <ul class="card-text address">
+                      <li>{{ u.address.street }}</li>
+                      <li>{{ u.address.suite }}</li>
+                      <li>{{ u.address.city }}</li>
+                      <li>{{ u.address.zipcode }}</li>
+                  </ul>
+            </div>
+          </div>
+    </div>
+</div>
